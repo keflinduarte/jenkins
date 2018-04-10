@@ -1,0 +1,55 @@
+https://www.udemy.com/working-with-jenkins/learn/v4/overview
+
+Jenkins : open source automation server which can be used to automate all sorts of tasks such as building, testing and others.
+
+TFS - study it later ..
+-------------------------------------------------------------------
+
+Installation and Getting Started
+
+Pre-Requisite
+Java
+Jenkins war file
+Supporting Tools : Maven, Nunit, Nuget, Git
+
+Installation
+1) Download Jenkins war from the website (jenkins.war)
+2) On Git, enter java -jar jenkins.war (java -jar jenkins.war --httpPort=8080
+3) Check the password afterward the installation (7fb345cefdf74aebbd241ee0ae1317f8)
+4) Go to localhost:8080, then enter the password
+5) Install sugested plugins
+6) Everything will be installed here : C:/Users/knro/.jenkins/war/, where all the jenkins configuration will be
+7) Create an user (keflinduarte - usual password - keflinduarte@gmail.com)
+
+-------------------------------------------------------------------------
+
+Common Tools (Git)
+
+1) Gerenciar Jenkins > Global Tool Configuration
+2) Git 
+2.1) Git Name : any name e.g. GitLocal
+2.2) Git Path : path where git is installed (C:\Users\knro\AppData\Local\Programs\Git\git-bash.exe)
+
+-----------------------------------------------
+
+Building project using Maven
+
+Project : Git ExecuteAutomation > SeleniumNUnitParam (C#) e cucumberbasic (java)
+
+-----------------------------------------
+
+1) Git clone cucumberbasic
+2) Git: run 'mvn' command
+3) mvn clean ; mvn compile
+
+---------------------------
+Build the project using Jenkins
+
+1) Jenkins > New Job
+2) Enter a name > click on Freestyle project
+3) Enter Git repository
+4) Build : Invoke top-level Maven targets > Goals: compile
+5) Save
+6) Menu esquerdo: Construir Agora/Build
+
+
